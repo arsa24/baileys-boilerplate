@@ -1,0 +1,13 @@
+{
+  "name": "baileys-boilerplate",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "inquirer": "^12.3.0"
+  },
+  "bin": {
+    "baileys-boilerplate": "./main.js"
+  },
+  "license": "MIT"
+}
