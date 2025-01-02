@@ -90,6 +90,7 @@ const main = async () => {
         }
       );
     }
+  console.log("\nPlease Read the documentation first.")
   } catch (error) {
     console.error(chalk.red("Error:", error.message));
     console.error(error.stack);
