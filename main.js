@@ -42,7 +42,7 @@ const main = async () => {
       console.log(chalk.green("Directory created:", input.projectName));
       if (input.typeBot === "Case") {
         console.log(chalk.green("Generating Case bot..."));
-        caseBot(input.projectName);
+        caseBot(input.projectName, input.module);
       } else if (input.typeBot === "Plugin") {
         console.log(chalk.green("Generating Plugin bot..."));
         pluginBot(input.projectName, input.module);
@@ -60,8 +60,6 @@ const main = async () => {
         scripts: {
           start: "node main.js",
           "use-pairing-code": "node main.js --use-code",
-          "start-pm2": "./node_modules/.bin/pm2 start ./ecosystem.config.cjs",
-          "stop-pm2": "./node_modules/.bin/pm2 stop ./ecosystem.config.cjs",
         },
         keywords: ["bot", "wa", "wabot", "whatsapp"],
         dependencies: {
@@ -90,7 +88,7 @@ const main = async () => {
         }
       );
     }
-  console.log("\nPlease Read the documentation first.")
+    console.log("\nPlease Read the documentation first.");
   } catch (error) {
     console.error(chalk.red("Error:", error.message));
     console.error(error.stack);
