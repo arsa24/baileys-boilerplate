@@ -20,5 +20,16 @@ export const caseBot = async (pathBot, module) => {
     }
     fs.writeFileSync(`${pathBot}/main.js`, main);
     fs.writeFileSync(`${pathBot}/lib.js`, lib);
+  } else {
+    const mainPath = path.resolve(__dirname, "../template/case/esm/main.js");
+    const libPath = path.resolve(__dirname, "../template/case/esm/lib.js");
+    try {
+      main = fs.readFileSync(mainPath, "utf8");
+      lib = fs.readFileSync(libPath, "utf8");
+    } catch (err) {
+      console.error("Error:", err.message);
+    }
+    fs.writeFileSync(`${pathBot}/main.js`, main);
+    fs.writeFileSync(`${pathBot}/lib.js`, lib);
   }
 };
