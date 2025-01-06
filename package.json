@@ -1,11 +1,15 @@
 {
+  "author": "arsa24",
   "name": "baileys-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.1",
+  "main": "./main.js",
   "type": "module",
+  "keywords": ["baileys", "baileys-boilerplate", "boirlerplate"],
   "dependencies": {
     "chalk": "^5.4.1",
     "inquirer": "^12.3.0"
   },
+  "description": "Simple Baileys boilerplate",
   "bin": {
     "baileys-boilerplate": "./main.js"
   },
