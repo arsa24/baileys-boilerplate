@@ -10,11 +10,11 @@ export const pluginBot = async (pathBot, module) => {
   let config = "";
   let connection = "";
   let example = "";
-  const configPath = path.resolve(
-    __dirname,
-    "../template/plugin/cjs/config.js"
-  );
   if (module === "Common JS") {
+    const configPath = path.resolve(
+      __dirname,
+      "../template/plugin/cjs/config.js"
+    );
     const mainPath = path.resolve(__dirname, "../template/plugin/cjs/main.js");
     const utilsPath = path.resolve(
       __dirname,
@@ -43,6 +43,10 @@ export const pluginBot = async (pathBot, module) => {
       console.error("Error:", err.message);
     }
   } else if (module === "ES Module") {
+    const configPath = path.resolve(
+      __dirname,
+      "../template/plugin/esm/config.js"
+    );
     const mainPath = path.resolve(__dirname, "../template/plugin/esm/main.js");
     const utilsPath = path.resolve(
       __dirname,
