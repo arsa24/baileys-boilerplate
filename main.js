@@ -27,7 +27,7 @@ const main = async () => {
         name: "typeBot",
         type: "list",
         message: "Choose bot type",
-        choices: ["Plugin", "Case", "Plugin + Case"],
+        choices: ["Plugin", "Case"],
       },
       {
         name: "installPkg",
