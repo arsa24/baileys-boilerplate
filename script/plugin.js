@@ -83,7 +83,7 @@ export const pluginBot = async (pathBot, module) => {
   fs.writeFileSync(`${libPath}/connection.js`, connection);
   fs.writeFileSync(`${libPath}/Utils.js`, utils);
 
-  const plugins = ["test", "downloader", "tools", "owners"];
+  const plugins = ["test", "downloader", "tools", "owners", "maker"];
   plugins.forEach((plugin) => {
     fs.mkdirSync(`${pathBot}/src/plugin/${plugin}`, { recursive: true });
   });
